@@ -188,8 +188,12 @@ git checkout alejo
 ```
 
 ### 📌 2️⃣ Descargar los últimos avances del proyecto
+
+
 ```
+git checkout alejo
 git pull origin main
+
 ```
 
 Esto asegura que trabajan con la versión más reciente del proyecto.
@@ -201,23 +205,7 @@ Esto asegura que trabajan con la versión más reciente del proyecto.
 ### 📌 1️⃣ Guardar los cambios
 ```
 git add .
-git commit -m "Descripción del avance"
-```
-
-### 📌 2️⃣ Subir los cambios a su rama
-```
-git push origin NOMBRE_RAMA
-```
-
-Ejemplos:
-
-Wilson:
-```
-git push origin wilson
-```
-
-Alejo:
-```
+git commit -m "Contenido añadido en personajes"
 git push origin alejo
 ```
 
@@ -261,13 +249,4 @@ Esto evita errores y mantiene `main` estable.
 ✔️ Git bien gestionado  
 ✔️ README profesional (este)
 
----
 
-Si quieres, puedo prepararte también:
-
-- La **estructura HTML base** ya lista para copiar y pegar  
-- El **CSS inicial para Wilson**  
-- El **formulario completo para Alejo**  
-- Un **diagrama visual del flujo Git**  
-
-Solo dime qué quieres que prepare ahora.
