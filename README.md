@@ -47,12 +47,6 @@ Esto permite cumplir **todos los requisitos del profesor** de forma natural y vi
 
 ---
 
-# 👥 3. Reparto de tareas (para sacar un 10)
-
-A continuación se detallan las tareas exactas de cada miembro del equipo.
-
----
-
 # 🟦 José – Estructura HTML (100% del HTML)
 
 José es responsable de **toda la estructura HTML del proyecto**, asegurando que cumple los requisitos del profesor y que valida correctamente en W3C.
