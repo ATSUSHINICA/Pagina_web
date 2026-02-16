@@ -156,6 +156,16 @@ Cada miembro trabaja en **su propia rama**:
 
 NADIE trabaja en `main`.
 
+
+# 4.0.1 Clonar repositorio de GitHub
+
+Cada miembro tiene que clonar el repositorio main sus respectivos ordenadores
+es necesario que usen los comandos que se dejarán debajo.
+
+```
+git clone https://github.com/ATSUSHINICA/Pagina_web.git
+```
+
 ---
 
 # 🟦 4.1. Comandos que deben usar ANTES de empezar a trabajar cada día
