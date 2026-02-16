@@ -1,14 +1,3 @@
-Perfecto, José. Vamos a dejarlo **todo listo para el README**, adaptado al tema **Hollow Knight**, y además voy a reorganizar los comandos de Git tal como pediste:
-
-- **Un bloque con los comandos que deben usar ANTES de empezar a trabajar cada día**  
-- **Un bloque con los comandos que deben usar DESPUÉS de terminar su trabajo del día**
-
-Y todo integrado en un README profesional, completo y listo para entregar.
-
-Aquí lo tienes.
-
----
-
 # 📘 Proyecto Web – *Hollow Knight*  
 ### **Trabajo HTML + CSS – Segunda Evaluación**  
 **Autores:** José, Wilson y Alejo
