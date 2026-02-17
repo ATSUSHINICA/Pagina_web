@@ -173,11 +173,11 @@ git clone https://github.com/ATSUSHINICA/Pagina_web.git
 ### 📌 1️⃣ Cambiar a su rama
 Wilson:
 ```
-git checkout wilson
+git checkout -b wilson
 ```
 Alejo:
 ```
-git checkout alejo
+git checkout -b alejo
 ```
 
 ### 📌 2️⃣ Descargar los últimos avances del proyecto
