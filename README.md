@@ -170,6 +170,13 @@ git clone https://github.com/ATSUSHINICA/Pagina_web.git
 
 # 🟦 4.1. Comandos que deben usar ANTES de empezar a trabajar cada día
 
+### Conectarse con el repositorio
+
+```
+git remote add origin https://github.com/ATSUSHINICA/Pagina_web.git
+
+```
+
 ### 📌 1️⃣ Cambiar a su rama
 Wilson:
 ```
