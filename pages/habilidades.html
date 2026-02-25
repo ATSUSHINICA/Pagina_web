@@ -11,25 +11,32 @@
     </head>
 
     <body>
-        <div id="contenido">
 
-            <!-- Aquí también va la imagen del titulo de hollow alejo-->
+        <header id="inicio">
+            <h1>HABILIDADES</h1>
+            <figure>
+                <img src="../img/titleHollow.png" alt="Imagen juego Hollow Knight">
+            </figure>
+        </header>
 
-            <header id="inicio">
-                <h1>HABILIDADES</h1>
-                <figure>
-                    <img src="../img/titleHollow.png" alt="Imagen juego Hollow Knight">
-                </figure>
-            </header>
+        <nav>
+            <ul>
+                <li><a class="boton" href="../index.html" target="_self">inicio</a></li>
+                <li><a class="boton" href="./personajes.html" target="_self">PERSONAJES</a></li>
+                <li><a class="boton" href="./zonas.html" target="_self">ZONAS</a></li>
+                <li><a class="boton" href="./registro.html" target="_self">REGISTRO</a></li>
+            </ul>
+        </nav>
 
-            <nav>
-                <ul>
-                    <li><a class="boton" href="../index.html" target="_self">inicio</a></li>
-                    <li><a class="boton" href="./personajes.html" target="_self">PERSONAJES</a></li>
-                    <li><a class="boton" href="./zonas.html" target="_self">ZONAS</a></li>
-                    <li><a class="boton" href="./registro.html" target="_self">REGISTRO</a></li>
-                </ul>
-            </nav>
+        <aside id="barra-lateral">
+            <h2>CONTENIDO</h2>
+            <a href="#movimiento">Movimiento</a>
+            <a href="#hechizos">Hechizos</a>
+            <a href="#amuletos">Amuletos</a>
+            <a href="#inicio">↑ Inicio</a>
+        </aside>
+
+        <main>
 
             <section id="introduccion">
                 <h3>Habilidades de Hollow Knight</h3>
@@ -39,192 +46,209 @@
                 </p>
             </section>
 
-            <div id="layout">
+            <!-- ========================HABILIDADES DE MOVIMIENTO======================== -->
+            <section id="movimiento">
 
-                <aside id="barra-lateral">
-                    <h2>CONTENIDO</h2>
-                    <a href="#movimiento">Movimiento</a>
-                    <a href="#hechizos">Hechizos</a>
-                    <a href="#amuletos">Amuletos</a>
-                    <a href="#inicio">↑ Inicio</a>
-                </aside>
+                <h2>HABILIDADES DE MOVIMIENTO</h2>
 
-                <main>
+                <p>
+                    Las habilidades de movimiento se obtienen derrotando a ciertos jefes o explorando zonas concretas del mapa. 
+                    Cada una abre nuevas rutas y permite acceder a zonas previamente inaccesibles.
+                </p>
 
-                    <!-- ========================HABILIDADES DE MOVIMIENTO======================== -->
-                    <section id="movimiento">
-                        <h2>HABILIDADES DE MOVIMIENTO</h2>
+                <!-- Lista de definiciones -->
+                <dl>
+                    <dt>Salto de Mantis</dt>
+                    <dd>Permite realizar un segundo salto en el aire. Se obtiene en las Aldeas de las Mantis tras derrotar a las Señoras Mantis.</dd>
 
-                        <p>
-                            Las habilidades de movimiento se obtienen derrotando a ciertos jefes o explorando zonas concretas del mapa. 
-                            Cada una abre nuevas rutas y permite acceder a zonas previamente inaccesibles.
-                        </p>
+                    <dt>Dash de Sombra</dt>
+                    <dd>Permite lanzarse horizontalmente a gran velocidad. Al mejorarlo con el Corazón Oscuro, el Caballero se vuelve invulnerable durante el dash.</dd>
 
-                        <!-- Lista de definiciones -->
-                        <dl>
-                            <dt>Salto de Mantis</dt>
-                            <dd>Permite realizar un segundo salto en el aire. Se obtiene en las Aldeas de las Mantis tras derrotar a las Señoras Mantis.</dd>
+                    <dt>Garra de Monarca</dt>
+                    <dd>Permite escalar paredes saltando de una a otra. Imprescindible para explorar zonas verticales.</dd>
 
-                            <dt>Dash de Sombra</dt>
-                            <dd>Permite lanzarse horizontalmente a gran velocidad. Al mejorarlo con el Corazón Oscuro, el Caballero se vuelve invulnerable durante el dash.</dd>
+                    <dt>Ala de Cristal</dt>
+                    <dd>Permite realizar un salto adicional en el aire de forma indefinida mientras se mantenga la trayectoria ascendente.</dd>
 
-                            <dt>Garra de Monarca</dt>
-                            <dd>Permite escalar paredes saltando de una a otra. Imprescindible para explorar zonas verticales.</dd>
+                    <dt>Dash Isma</dt>
+                    <dd>Otorga resistencia al ácido, permitiendo nadar en los estanques venenosos de los Jardines de la Reina.</dd>
+                </dl>
 
-                            <dt>Ala de Cristal</dt>
-                            <dd>Permite realizar un salto adicional en el aire de forma indefinida mientras se mantenga la trayectoria ascendente.</dd>
+                <!-- Tabla con combinación de celdas -->
+                <h3>Resumen de habilidades de movimiento</h3>
 
-                            <dt>Dash Isma</dt>
-                            <dd>Otorga resistencia al ácido, permitiendo nadar en los estanques venenosos de los Jardines de la Reina.</dd>
-                        </dl>
+                <table>
 
-                        <!-- Tabla con combinación de celdas -->
-                        <h3>Resumen de habilidades de movimiento</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Habilidad</th>
-                                    <th>Ubicación</th>
-                                    <th>Efecto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td rowspan="2">Saltos</td>
-                                    <td>Salto de Mantis</td>
-                                    <td>Aldeas de las Mantis</td>
-                                    <td>Doble salto en el aire</td>
-                                </tr>
-                                <tr>
-                                    <td>Ala de Cristal</td>
-                                    <td>Pico de Cristal</td>
-                                    <td>Salto extra continuo</td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">Desplazamiento</td>
-                                    <td>Dash de Sombra</td>
-                                    <td>Ciudad de Lágrimas</td>
-                                    <td>Dash rápido horizontal</td>
-                                </tr>
-                                <tr>
-                                    <td>Dash Isma</td>
-                                    <td>Jardines de la Reina</td>
-                                    <td>Resistencia al ácido</td>
-                                </tr>
-                                <tr>
-                                    <td>Escalada</td>
-                                    <td>Garra de Monarca</td>
-                                    <td>Salidas Olvidadas</td>
-                                    <td>Escalar paredes</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Habilidad</th>
+                            <th>Ubicación</th>
+                            <th>Efecto</th>
+                        </tr>
+                    </thead>
 
-                        <!-- Aquí puedes dejar algunas imagenes de las habilidades simplemente duplica el img y las añades y listo -->
-                        <figure>
-                            <img src="../img/habilidades_movimiento.png" alt="Habilidades de movimiento en Hollow Knight">
-                        </figure>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Saltos</td>
+                            <td>Salto de Mantis</td>
+                            <td>Aldeas de las Mantis</td>
+                            <td>Doble salto en el aire</td>
+                        </tr>
 
-                    </section>
+                        <tr>
+                            <td>Ala de Cristal</td>
+                            <td>Pico de Cristal</td>
+                            <td>Salto extra continuo</td>
+                        </tr>
 
-                    <!-- ========================HECHIZOS======================== -->
-                    <section id="hechizos">
-                        <h2>HECHIZOS</h2>
+                        <tr>
+                            <td rowspan="2">Desplazamiento</td>
+                            <td>Dash de Sombra</td>
+                            <td>Ciudad de Lágrimas</td>
+                            <td>Dash rápido horizontal</td>
+                        </tr>
 
-                        <p>
-                            Los hechizos se lanzan consumiendo Alma, el recurso mágico del juego. Se obtienen explorando 
-                            Hallownest y pueden mejorarse encontrando sus versiones potenciadas.
-                        </p>
+                        <tr>
+                            <td>Dash Isma</td>
+                            <td>Jardines de la Reina</td>
+                            <td>Resistencia al ácido</td>
+                        </tr>
 
-                        <!-- Lista no ordenada -->
-                        <h3>Lista de hechizos disponibles</h3>
-                        <ul>
-                            <li>Venganza del Alma — dispara un proyectil de Alma hacia adelante. Su versión mejorada es Rugido del Alma.</li>
-                            <li>Descenso Devastador — lanza al Caballero hacia abajo con gran fuerza. Su versión mejorada es Colapso Abismal.</li>
-                            <li>Lanza de Sombra — lanza un proyectil de oscuridad hacia arriba. Su versión mejorada es Furia Abismal.</li>
-                        </ul>
+                        <tr>
+                            <td>Escalada</td>
+                            <td>Garra de Monarca</td>
+                            <td>Salidas Olvidadas</td>
+                            <td>Escalar paredes</td>
+                        </tr>
+                    </tbody>
 
-                        <!-- Tabla con combinación de celdas -->
-                        <h3>Comparativa de hechizos</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Hechizo</th>
-                                    <th>Coste de Alma</th>
-                                    <th>Versión mejorada</th>
-                                    <th colspan="2">Dirección / Efecto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Venganza del Alma</td>
-                                    <td>33</td>
-                                    <td>Rugido del Alma</td>
-                                    <td>Horizontal</td>
-                                    <td>Proyectil de Alma</td>
-                                </tr>
-                                <tr>
-                                    <td>Descenso Devastador</td>
-                                    <td>33</td>
-                                    <td>Colapso Abismal</td>
-                                    <td>Vertical (abajo)</td>
-                                    <td>Golpe en área</td>
-                                </tr>
-                                <tr>
-                                    <td>Lanza de Sombra</td>
-                                    <td>33</td>
-                                    <td>Furia Abismal</td>
-                                    <td>Vertical (arriba)</td>
-                                    <td>Proyectil oscuro</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </table>
 
-                        <!-- Aquí igual que la de arriba, solo es suplicar y añadir las imagenes en la carpeta imagenes, recuerda que las imagenes tienen
-                        que ser homogeneas-->
-                        <figure>
-                            <img src="../img/hechizos.png" alt="Hechizos del Caballero en Hollow Knight">
-                        </figure>
+                <!-- Aquí puedes dejar algunas imagenes de las habilidades simplemente duplica el img y las añades y listo -->
+                <figure>
+                    <img src="../img/habilidades_movimiento.png" alt="Habilidades de movimiento en Hollow Knight">
+                </figure>
 
-                    </section>
+            </section>
 
-                    <!-- ========================AMULETOS======================== -->
-                    <section id="amuletos">
-                        <h2>AMULETOS</h2>
 
-                        <p>
-                            Los amuletos son objetos equipables que otorgan ventajas pasivas al Caballero. Cada amuleto 
-                            ocupa una o más ranuras de las Muescas disponibles. Hay más de 45 amuletos distintos en el juego.
-                        </p>
+            <!-- ========================HECHIZOS======================== -->
+            <section id="hechizos">
+                <h2>HECHIZOS</h2>
 
-                        <!-- Lista ordenada por utilidad de los amuletos -->
-                        <h3>Amuletos más destacados</h3>
-                        <ol>
-                            <li>Corazón Frágil / Resistente — aumenta la vida máxima del Caballero en dos máscaras.</li>
-                            <li>Fuerza Frágil / Resistente — incrementa el daño del clavo en un 50%.</li>
-                            <li>Reunión del Alma — aumenta la cantidad de Alma que se recupera al golpear enemigos.</li>
-                            <li>Aullido Ensordecedor — amplía el área de efecto de los hechizos verticales.</li>
-                            <li>Marco de Sombras — potencia el Dash de Sombra causando daño a los enemigos al atravesarlos.</li>
-                            <li>Herrero Rápido — aumenta la velocidad de ataque del clavo.</li>
-                        </ol>
+                <p>
+                    Los hechizos se lanzan consumiendo Alma, el recurso mágico del juego. Se obtienen explorando 
+                    Hallownest y pueden mejorarse encontrando sus versiones potenciadas.
+                </p>
 
-                        <!-- aquí un poco de lo mismo con las demás, solo añade imagenes con el nombre debajo y listo  -->
-                        <figure>
-                            <img src="../img/amuletos.png" alt="Amuletos disponibles en Hollow Knight">
-                        </figure>
+                <!-- Lista no ordenada -->
+                <h3>Lista de hechizos disponibles</h3>
 
-                        <!-- Enlace a página externa -->
-                        <p>
-                            Para consultar la lista completa de amuletos, podéis visitar la 
-                            <a href="https://hollowknight.fandom.com/es/wiki/Amuletos" target="_blank">wiki oficial de Hollow Knight</a>.
-                        </p>
+                <ul>
+                    <li>Venganza del Alma — dispara un proyectil de Alma hacia adelante. Su versión mejorada es Rugido del Alma.</li>
+                    <li>Descenso Devastador — lanza al Caballero hacia abajo con gran fuerza. Su versión mejorada es Colapso Abismal.</li>
+                    <li>Lanza de Sombra — lanza un proyectil de oscuridad hacia arriba. Su versión mejorada es Furia Abismal.</li>
+                </ul>
 
-                    </section>
+                <!-- Tabla con combinación de celdas -->
+                
+                <h3>Comparativa de hechizos</h3>
+                
+                <table>
 
-                </main>
+                    <thead>
+                        <tr>
+                            <th>Hechizo</th>
+                            <th>Coste de Alma</th>
+                            <th>Versión mejorada</th>
+                            <th colspan="2">Dirección / Efecto</th>
+                        </tr>
+                    </thead>
 
-            </div><!-- fin layout -->
 
-        </div><!-- fin contenido -->
+                    <tbody>
+                        <tr>
+                            <td>Venganza del Alma</td>
+                            <td>33</td>
+                            <td>Rugido del Alma</td>
+                            <td>Horizontal</td>
+                            <td>Proyectil de Alma</td>
+                        </tr>
+
+                        <tr>
+                            <td>Descenso Devastador</td>
+                            <td>33</td>
+                            <td>Colapso Abismal</td>
+                            <td>Vertical (abajo)</td>
+                            <td>Golpe en área</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lanza de Sombra</td>
+                            <td>33</td>
+                            <td>Furia Abismal</td>
+                            <td>Vertical (arriba)</td>
+                            <td>Proyectil oscuro</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <!-- Aquí igual que la de arriba, solo es suplicar y añadir las imagenes en la carpeta imagenes, recuerda que las imagenes tienen
+                que ser homogeneas-->
+
+                <figure>
+                    <img src="../img/hechizos.png" alt="Hechizos del Caballero en Hollow Knight">
+                </figure>
+
+            </section>
+
+            <!-- ========================AMULETOS======================== -->
+            <section id="amuletos">
+                <h2>AMULETOS</h2>
+
+                <p>
+                    Los amuletos son objetos equipables que otorgan ventajas pasivas al Caballero. Cada amuleto 
+                    ocupa una o más ranuras de las Muescas disponibles. Hay más de 45 amuletos distintos en el juego.
+                </p>
+
+                <!-- Lista ordenada por utilidad de los amuletos -->
+                <h3>Amuletos más destacados</h3>
+                <ol>
+                    <li>Corazón Frágil / Resistente — aumenta la vida máxima del Caballero en dos máscaras.</li>
+                    <li>Fuerza Frágil / Resistente — incrementa el daño del clavo en un 50%.</li>
+                    <li>Reunión del Alma — aumenta la cantidad de Alma que se recupera al golpear enemigos.</li>
+                    <li>Aullido Ensordecedor — amplía el área de efecto de los hechizos verticales.</li>
+                    <li>Marco de Sombras — potencia el Dash de Sombra causando daño a los enemigos al atravesarlos.</li>
+                    <li>Herrero Rápido — aumenta la velocidad de ataque del clavo.</li>
+                </ol>
+
+                <!-- aquí un poco de lo mismo con las demás, solo añade imagenes con el nombre debajo y listo  -->
+                <figure>
+                    <img src="../img/amuletos.png" alt="Amuletos disponibles en Hollow Knight">
+                </figure>
+
+                <!-- Enlace a página externa -->
+                <p>
+                    Para consultar la lista completa de amuletos, podéis visitar la 
+                    <a href="https://hollowknight.fandom.com/es/wiki/Amuletos" target="_blank">wiki oficial de Hollow Knight</a>.
+                </p>
+
+            </section>
+        </main>
+
+        <footer>
+            <section class="contenedor-footer">
+                <section class="seccion-footer">
+                    <h4>Sobre nosotros</h4>
+                    <p>Somos unos estudiantes que pertenece al primer curso de Grado Superior de DAM </p>
+                </section>
+            
+                <address class="seccion-footer">
+                    <h4>Contacto</h4>
+                    <p>Email: alumnosDAM@iespabloserrano.com</p>
+                </address>
+            </section>
+        </footer>
     </body>
 </html>
