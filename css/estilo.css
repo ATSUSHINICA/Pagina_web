@@ -1,4 +1,12 @@
 
+/* --- VARIABLES ------------------------------------------------------------------------------- */
+
+:root {
+
+    --color-fondo: #0a0b0f;
+    --color-letra: #b8bcc8;
+}
+
 /* --- RESETEO --------------------------------------------------------------------------------- */
 
 /* 
@@ -10,13 +18,13 @@
 
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;   
 }
 
 /* --- ESTILOS GENERALES ----------------------------------------------------------------------- */
 
 /* 
-    En algunos navegadores el desplazamiento al lo controlar la etiqueta html (navegadores modernos), 
+    En algunos navegadores el desplazamiento lo controla la etiqueta html (navegadores modernos), 
     en otros la etiquta body (navegadores antiguos), ponemos el desplazamiento liso en las 2 
     etiquetas para abarcar los 2 casos.
 */
@@ -25,3 +33,32 @@ html, body {
 
     scroll-behavior: smooth;
 }
+
+body {
+
+    /*Fondo*/
+    background-color: var(--color-fondo);
+
+    /*Letra*/
+    color: var(--color-letra);
+    font-family: 'Crimson Pro', 'Georgia', 'serif';
+    font-size: 1.1rem;
+    line-height: 1.8; /* Esta propiedad marca el espaciado entre las lineas de texto, le establecemos uno de *1.8 respecto al normal */
+
+    /* Estructura principal de la pagina */
+    display: grid; /* Permite colocar las etiquetas header, nav, aside, main, footer como filas, y columnas a gusto */
+    grid-template-rows: auto auto 1fr auto; /* fr: fracción del sobrante del bloque */
+    grid-template-columns: 1fr 260px;
+    grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "main    aside"
+        "footer  footer";
+    min-height: 100vh;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+aside { grid-area: aside; }
+main { grid-area: main; }
+footer { grid-area: footer; }
