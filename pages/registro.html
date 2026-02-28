@@ -10,142 +10,128 @@
     </head>
     <body>
 
-        <header id="inicio">
-            <h1>REGISTRO</h1>
-            <figure>
-                <img src="../img/titleHollow.png" alt="Imagen juego Hollow Knight">
-            </figure>
+        <header id="cabecera">
+            <h1><img src="img/titleHollow.png" alt="Imagen titulo juego Hollow Knight"></h1>
         </header>
 
         <nav>
             <ul>
-                <li><a class="boton" href="../index.html" target="_self">INICIO</a></li>
-                <li><a class="boton" href="./habilidades.html" target="_self">HABILIDADES</a></li>
-                <li><a class="boton" href="./personajes.html" target="_self">PERSONAJES</a></li>
-                <li><a class="boton" href="./zonas.html" target="_self">ZONAS</a></li>
+                <li><a href="../index.html" target="_self">INICIO</a></li>
+                <li><a href="./habilidades.html" target="_self">HABILIDADES</a></li>
+                <li><a href="./personajes.html" target="_self">PERSONAJES</a></li>
+                <li><a href="./zonas.html" target="_self">ZONAS</a></li>
             </ul>
         </nav>
 
         <main>
+            <h2>REGISTRO</h2>
 
-            <section id="registro">
+            <p class="subtitulo">Completa el formulario para registrarte como explorador de Hallownest y llevar un seguimiento de tu aventura.</p>
 
-                <h2>Únete a Hallownest</h2>
-                <p class="subtitulo">Completa el formulario para registrarte como explorador de Hallownest y llevar un seguimiento de tu aventura.</p>
+            <form action="confirmacion.html" method="POST">
+                <!-- 1. Caja de texto con longitud máxima y tamaño -->
+                <label for="nombre">Nombre del explorador:</label><br>
+                <input type="text" id="nombre" name="nombre" maxlength="40" size="30" placeholder="Ej: El Caballero"><br><br>
 
-                <form action="confirmacion.html" method="POST">
+                <!-- 2. Caja de texto multilínea -->
+                <label for="historia">Tu historia en Hallownest:</label><br>
+                <textarea id="historia" name="historia" rows="5" cols="50" placeholder="Cuéntanos cómo llegaste a Hallownest..."></textarea><br><br>
 
-                    <!-- 1. Caja de texto con longitud máxima y tamaño -->
-                    <label for="nombre">Nombre del explorador:</label><br>
-                    <input type="text" id="nombre" name="nombre" maxlength="40" size="30" placeholder="Ej: El Caballero"><br><br>
+                <!-- 3. Número con incremento automático -->
+                <label for="horas">Horas jugadas:</label><br>
+                <input type="number" id="horas" name="horas" min="0" max="9999" step="10" placeholder="0"><br><br>
 
-                    <!-- 2. Caja de texto multilínea -->
-                    <label for="historia">Tu historia en Hallownest:</label><br>
-                    <textarea id="historia" name="historia" rows="5" cols="50" placeholder="Cuéntanos cómo llegaste a Hallownest..."></textarea><br><br>
+                <!-- 4. Contraseña -->
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres"><br><br>
 
-                    <!-- 3. Número con incremento automático -->
-                    <label for="horas">Horas jugadas:</label><br>
-                    <input type="number" id="horas" name="horas" min="0" max="9999" step="10" placeholder="0"><br><br>
+                <!-- 5a. Primera agrupación de radio: dificultad -->
+                <fieldset>
+                    <legend>Dificultad de juego</legend>
+                    <input type="radio" id="facil" name="dificultad" value="facil">
+                    <label for="facil">Explorador</label>
+                    <input type="radio" id="normal" name="dificultad" value="normal">
+                    <label for="normal">Caballero</label>
+                    <input type="radio" id="dificil" name="dificultad" value="dificil">
+                    <label for="dificil">Campeón de Acero</label>
+                </fieldset><br>
 
-                    <!-- 4. Contraseña -->
-                    <label for="password">Contraseña:</label><br>
-                    <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres"><br><br>
+                <!-- 5b. Segunda agrupación de radio: región favorita -->
+                <fieldset>
+                    <legend>Zona favorita de Hallownest</legend>
+                    <input type="radio" id="abismo" name="zona" value="abismo">
+                    <label for="abismo">El Abismo</label>
+                    <input type="radio" id="ciudad" name="zona" value="ciudad">
+                    <label for="ciudad">Ciudad de Lágrimas</label>
+                    <input type="radio" id="jardin" name="zona" value="jardin">
+                    <label for="jardin">Jardines de la Reina</label>
+                    <input type="radio" id="colmena" name="zona" value="colmena">
+                    <label for="colmena">La Colmena</label>
+                </fieldset><br>
 
-                    <!-- 5a. Primera agrupación de radio: dificultad -->
-                    <fieldset>
-                        <legend>Dificultad de juego</legend>
-                        <input type="radio" id="facil" name="dificultad" value="facil">
-                        <label for="facil">Explorador</label>
-                        <input type="radio" id="normal" name="dificultad" value="normal">
-                        <label for="normal">Caballero</label>
-                        <input type="radio" id="dificil" name="dificultad" value="dificil">
-                        <label for="dificil">Campeón de Acero</label>
-                    </fieldset><br>
+                <!-- 6. Checkboxes: habilidades desbloqueadas -->
+                <fieldset>
+                    <legend>Habilidades desbloqueadas</legend>
+                    <input type="checkbox" id="mantis" name="habilidades" value="mantis">
+                    <label for="mantis">Salto de Mantis</label><br>
+                    <input type="checkbox" id="dash" name="habilidades" value="dash">
+                    <label for="dash">Dash de Sombra</label><br>
+                    <input type="checkbox" id="garra" name="habilidades" value="garra">
+                    <label for="garra">Garra de Monarca</label><br>
+                    <input type="checkbox" id="cristal" name="habilidades" value="cristal">
+                    <label for="cristal">Ala de Cristal</label><br>
+                    <input type="checkbox" id="isma" name="habilidades" value="isma">
+                    <label for="isma">Dash Isma</label>
+                </fieldset><br>
 
-                    <!-- 5b. Segunda agrupación de radio: región favorita -->
-                    <fieldset>
-                        <legend>Zona favorita de Hallownest</legend>
-                        <input type="radio" id="abismo" name="zona" value="abismo">
-                        <label for="abismo">El Abismo</label>
-                        <input type="radio" id="ciudad" name="zona" value="ciudad">
-                        <label for="ciudad">Ciudad de Lágrimas</label>
-                        <input type="radio" id="jardin" name="zona" value="jardin">
-                        <label for="jardin">Jardines de la Reina</label>
-                        <input type="radio" id="colmena" name="zona" value="colmena">
-                        <label for="colmena">La Colmena</label>
-                    </fieldset><br>
+                <!-- 7. Desplegable con 5+ opciones: amuleto favorito -->
+                <label for="amuleto">Amuleto favorito:</label><br>
+                <select id="amuleto" name="amuleto">
+                    <option value="" disabled selected>Selecciona un amuleto</option>
+                    <option value="corazon">Corazón Resistente</option>
+                    <option value="fuerza">Fuerza Resistente</option>
+                    <option value="reunion">Reunión del Alma</option>
+                    <option value="marco">Marco de Sombras</option>
+                    <option value="herrero">Herrero Rápido</option>
+                    <option value="aullido">Aullido Ensordecedor</option>
+                </select><br><br>
 
-                    <!-- 6. Checkboxes: habilidades desbloqueadas -->
-                    <fieldset>
-                        <legend>Habilidades desbloqueadas</legend>
-                        <input type="checkbox" id="mantis" name="habilidades" value="mantis">
-                        <label for="mantis">Salto de Mantis</label><br>
-                        <input type="checkbox" id="dash" name="habilidades" value="dash">
-                        <label for="dash">Dash de Sombra</label><br>
-                        <input type="checkbox" id="garra" name="habilidades" value="garra">
-                        <label for="garra">Garra de Monarca</label><br>
-                        <input type="checkbox" id="cristal" name="habilidades" value="cristal">
-                        <label for="cristal">Ala de Cristal</label><br>
-                        <input type="checkbox" id="isma" name="habilidades" value="isma">
-                        <label for="isma">Dash Isma</label>
-                    </fieldset><br>
+                <!-- 8. Selector de mes -->
+                <label for="mes">Mes en que empezaste a jugar:</label><br>
+                <input type="month" id="mes" name="mes"><br><br>
 
-                    <!-- 7. Desplegable con 5+ opciones: amuleto favorito -->
-                    <label for="amuleto">Amuleto favorito:</label><br>
-                    <select id="amuleto" name="amuleto">
-                        <option value="" disabled selected>Selecciona un amuleto</option>
-                        <option value="corazon">Corazón Resistente</option>
-                        <option value="fuerza">Fuerza Resistente</option>
-                        <option value="reunion">Reunión del Alma</option>
-                        <option value="marco">Marco de Sombras</option>
-                        <option value="herrero">Herrero Rápido</option>
-                        <option value="aullido">Aullido Ensordecedor</option>
-                    </select><br><br>
+                <!-- 9. Selector de hora -->
+                <label for="hora">Hora habitual de juego:</label><br>
+                <input type="time" id="hora" name="hora"><br><br>
 
-                    <!-- 8. Selector de mes -->
-                    <label for="mes">Mes en que empezaste a jugar:</label><br>
-                    <input type="month" id="mes" name="mes"><br><br>
+                <!-- 10. Selector de fecha y hora -->
+                <label for="fechahora">Fecha y hora de tu último logro:</label><br>
+                <input type="datetime-local" id="fechahora" name="fechahora"><br><br>
 
-                    <!-- 9. Selector de hora -->
-                    <label for="hora">Hora habitual de juego:</label><br>
-                    <input type="time" id="hora" name="hora"><br><br>
+                <!-- 11. Selector de color -->
+                <label for="color">Color de tu capa preferido:</label><br>
+                <input type="color" id="color" name="color" value="#1a1a2e"><br><br>
 
-                    <!-- 10. Selector de fecha y hora -->
-                    <label for="fechahora">Fecha y hora de tu último logro:</label><br>
-                    <input type="datetime-local" id="fechahora" name="fechahora"><br><br>
+                <!-- 12. Selector de archivo -->
+                <label for="captura">Sube tu mejor captura de pantalla:</label><br>
+                <input type="file" id="captura" name="captura" accept=".jpg,.jpeg,.png"><br><br>
 
-                    <!-- 11. Selector de color -->
-                    <label for="color">Color de tu capa preferido:</label><br>
-                    <input type="color" id="color" name="color" value="#1a1a2e"><br><br>
-
-                    <!-- 12. Selector de archivo -->
-                    <label for="captura">Sube tu mejor captura de pantalla:</label><br>
-                    <input type="file" id="captura" name="captura" accept=".jpg,.jpeg,.png"><br><br>
-
-                    <!-- 13. Botón enviar · 14. Botón borrar -->
-                    <button type="submit">Registrarse en Hallownest</button>
-                    <button type="reset">Borrar datos</button>
-
-                </form>
-
-            </section>
-
+                <!-- 13. Botón enviar · 14. Botón borrar -->
+                <button type="submit">Registrarse en Hallownest</button>
+                <button type="reset">Borrar datos</button>
+            </form>
         </main>
 
         <footer>
-            <section class="contenedor-footer">
-
-                <section class="seccion-footer">
-                    <h4>Sobre nosotros</h4>
-                    <p>Somos unos estudiantes que pertenecen al primer curso de Grado Superior de DAM</p>
-                </section>
-
-                <address class="seccion-footer">
-                    <h4>Contacto</h4>
-                    <p>Email: alumnosDAM@iespabloserrano.com</p>
-                </address>
-
+            <section>
+                <h2>Sobre nosotros</h2>
+                <p>Somos unos estudíantes que pertenece al primer curso de Grado Superior de DAM </p>
             </section>
+        
+            <address>
+                <h2>Contacto</h2>
+                <p>Email: alumnosDAM@iespabloserrano.com</p>
+            </address>
         </footer>
 
     </body>
