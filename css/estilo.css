@@ -1,0 +1,27 @@
+
+/* --- RESETEO --------------------------------------------------------------------------------- */
+
+/* 
+    Establecemos que por defecto se pongan esas propiedades en la pagina, para que no haya
+    diferencias entre navegadores 
+*/
+
+*, *::before, *::after {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- ESTILOS GENERALES ----------------------------------------------------------------------- */
+
+/* 
+    En algunos navegadores el desplazamiento al lo controlar la etiqueta html (navegadores modernos), 
+    en otros la etiquta body (navegadores antiguos), ponemos el desplazamiento liso en las 2 
+    etiquetas para abarcar los 2 casos.
+*/
+
+html, body {
+
+    scroll-behavior: smooth;
+}
