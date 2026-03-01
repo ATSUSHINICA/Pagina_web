@@ -1,10 +1,46 @@
-
-/* --- VARIABLES ------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 :root {
 
-    --color-fondo: #0a0b0f;
-    --color-letra: #b8bcc8;
+    /* Variables de Colores de los fondos */
+
+    --fondo-color-por-defecto: #0a0b0f;
+    --fondo-color-nav:#0c0e16;
+    --fondo-color-aside:#0e1018;
+    --fondo-color-footer:#080a10;
+
+    --color-fondo-carta: #13151e;
+
+    /* Variables de Bordes */
+
+    --borde-color: #22263a;
+    --boder-color-suave: #2e3450;
+    --borde-anchura: 1px;
+
+    /* Variables de colores de letra */
+
+    --color-letra-links: #7ec8e3;
+    --color-letra-links-raton: #e8d8c0;
+
+    --color-letra-por-defecto: #b8bcc8;
+    --color-letra-h3: #e8d8c0;
+
+    /* Otros colores */
+
+    --color-apagado: #5a6070;
+    --color-crema-acentuado: #c8b8a2;
+    --color-crema-acentuado-2:  #e8d8c0;
+    --color-naranja: #d4824a; 
+
+    /* Tabla */
+
+    --fondo-negro-tabla: #10121a;
+
+    /* --sombra: 0 4px 24px rgba(0,0,0,0.7); */
+    
+    /* Tamaño de radio de cajas */
+
+    --radio: 3px
 }
 
 /* --- RESETEO --------------------------------------------------------------------------------- */
@@ -36,12 +72,12 @@ html, body {
 
 body {
 
-    /*Fondo*/
-    background-color: var(--color-fondo);
-
+    /*Fondo Por Defecto*/
+    background-color: var(--fondo-color-por-defecto);
+    
     /*Letra*/
-    color: var(--color-letra);
-    font-family: 'Crimson Pro', 'Georgia', 'serif';
+    color: var(--color-letra-por-defecto);
+    font-family: 'Crimson Pro', Georgia, serif;
     font-size: 1.1rem;
     line-height: 1.8; /* Esta propiedad marca el espaciado entre las lineas de texto, le establecemos uno de *1.8 respecto al normal */
 
@@ -53,12 +89,538 @@ body {
         "header  header"
         "nav     nav"
         "main    aside"
-        "footer  footer";
+        "footer  aside";
     min-height: 100vh;
 }
 
-header { grid-area: header; }
-nav { grid-area: nav; }
-aside { grid-area: aside; }
-main { grid-area: main; }
-footer { grid-area: footer; }
+a {
+
+    color: var(--color-letra-links);
+    text-decoration: none;
+}
+a:hover {
+    
+    color: var(--color-letra-links-raton)
+}
+
+strong { color: var(--color-crema-acentuado); }
+
+h2, h3, h4 {
+
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    color: var(--color-titulos-y-destacados);
+    letter-spacing: 0.06em; /* Espacio de letra */
+    line-height: 1.3; /* Sobreescribimos la altura de linea que pusimos en el body */
+}
+
+h4 {
+
+    color: var(--color-crema-acentuado);
+}
+
+/* --- HEADER ---------------------------------------------------------------------------------- */
+
+header { 
+
+    grid-area: header;
+    border-bottom: 1px solid var(--borde-color);
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 1.8rem;
+
+    background-image: url('../img/fondo_titulo.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+
+header h1 img {
+    max-height: 120px;
+}
+
+/* --- NAV ------------------------------------------------------------------------------------- */
+
+:root { --altura-nav: 3.7rem; }
+
+nav { 
+
+    grid-area: nav; 
+
+    background-color: var(--fondo-color-nav);
+    border-bottom: 1px solid var(--borde-color);
+
+    height: var(--altura-nav);
+
+    position: sticky;
+    top: 0;        /* se queda pegado arriba del todo */
+    z-index: 100;  /* flota por encima del resto del contenido */
+
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+
+    display: block; /* Volviendo las etiqueta inline <a> a block*/
+    padding: 0.9rem 1.8rem;
+
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--color-apagado);
+    
+    border-bottom: 2px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-crema-acentuado);
+    border-bottom-color: var(--color-crema-acentuado);
+    background: rgba(200,184,162,0.05);
+}
+
+/* --- ASIDE ----------------------------------------------------------------------------------- */
+
+aside { 
+
+    grid-area: aside;
+    background-color: var(--fondo-color-aside);
+    border-left: 1px solid var(--borde-color);
+
+    position: sticky;
+    top: var(--altura-nav); /* altura del nav */
+    height: calc(100vh - var(--altura-nav)); /* El aside mide de largo toda la pantalla menos lo que ocupe el nav */
+
+    padding: 2.5rem 2rem;
+}
+
+aside h2 {
+
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: var(--color-apagado);
+
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+
+    border-bottom: 1px solid var(--borde-color);
+}
+
+aside a {
+
+    display: block;
+    padding: 0.45rem 0.6rem;
+    font-size: 1rem;
+    color: var(--color-apagado);
+    border-radius: var(--radio);
+    border-left: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s, padding-left 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+aside a:hover {
+
+    color: var(--color-crema-acentuado);
+    border-left-color: var(--color-crema-acentuado);
+    background: rgba(200,184,162,0.05);
+    padding-left: 1rem;
+}
+
+/* Último enlace del aside (Volver Arriba) */
+
+aside a:last-child {
+
+    margin-top: 1.2rem;
+    padding: 0.4rem;
+
+    color: var(--color-apagado);
+    font-size: 0.9rem;
+    text-align: center;
+
+    border: 1px solid var(--borde-color);
+}
+
+aside a:last-child:hover {
+
+    border-color: var(--color-crema-acentuado);
+    padding-left: 0.6rem;
+    color: var(--color-crema-acentuado);
+}
+
+/* --- MAIN ------------------------------------------------------------------------------------ */
+
+main { 
+
+    grid-area: main;
+    padding: 2.5rem 4rem;
+}
+
+main > h2 {
+    font-size: 1.6rem;
+    color: var(--color-crema-acentuado);
+    letter-spacing: 0.12em;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--borde-color);
+    position: relative;  /* Sirve como referencia para la linea decorativa debajo del h2 */
+}
+
+/* Línea decorativa debajo el h2 del main */
+main > h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--color-crema-acentuado);
+}
+
+main > h2 + p {
+
+    margin-top: 1rem;
+}
+
+main p {
+
+    text-align: justify;
+}
+
+/* Sections */
+
+main > section {
+
+    margin-top: 2rem;
+}
+
+main > section > h3 {
+
+    border-bottom: var(--borde-anchura) solid var(--borde-color);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-letra-h3);
+}
+
+main > section > section {
+
+    border-left: 2px solid var(--borde-color);
+
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    padding-left: 1rem;
+}
+
+main > section > section:hover {
+
+    border-left-color: var(--color-crema-acentuado);
+    transition: border-color 0.3s ease;
+}
+
+/* Imagenes */
+
+figure {
+
+    margin: 1.5rem 0;
+}
+
+figure img {
+
+    display: block;
+    max-width: 100%;
+
+    border-radius: var(--radio);
+    border: 1px solid var(--borde-color);
+
+    background: var(--color-fondo-carta)
+}
+
+/* Articles */
+
+main > article:not(#teamCherry) {
+
+    border-left: 2px solid var(--borde-color);
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+}
+
+main > article:not(#teamCherry):hover {
+
+    border-left-color: var(--color-crema-acentuado);
+    transition: border-color 0.3s ease;
+}
+
+/* Article de team Cherry */
+
+#teamCherry {
+
+    background: var(--color-fondo-carta);
+
+    border: 1px solid var(--borde-color);
+    border-radius: var(--radio);
+
+    padding: 1.8rem 2rem;
+
+    transition: border-color 0.3s ease;
+    position: relative;
+}
+
+#teamCherry:hover {
+
+    border-top-color: var(--color-crema-acentuado);
+}
+
+#teamCherry h3 {
+
+    border-bottom: none;
+    margin-bottom: 0.8rem;
+}
+
+#teamCherry p:last-child {
+
+    font-style: italic;
+    color: var(--color-apagado);
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--boder-color-suave);
+}
+
+/* Tablas */
+
+/* ── Tablas (habilidades) ────────────────────────────────────── */
+table {
+    
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+}
+
+thead {
+    
+    background: var(--fondo-negro-tabla);
+}
+
+thead th {
+
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--color-crema-acentuado);
+    text-align: left;
+
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--borde-color);
+}
+
+tbody tr:hover {
+    background: rgba(200,184,162,0.04);
+}
+
+tbody td {
+
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--borde-color);
+
+    color: var(--color-letra-por-defecto);
+    vertical-align: middle;
+}
+
+/* Listas (Sección habilidades)*/
+dl, ul, ol {
+
+    margin: 0.8rem 0 1rem 1.5rem;
+}
+
+dt {
+
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: var(--color-crema-acentuado);
+    margin-top: 0.8rem;
+}
+
+dd {
+    margin-left: 1.2rem;
+    color: var(--color-letra-por-defecto);
+    font-size: 0.95rem;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5rem;
+    color: var(--color-letra-por-defecto);
+}
+
+ul li::marker { color: var(--color-crema-acentuado); }
+ol li::marker { color: var(--color-crema-acentuado); font-family: 'Cinzel', serif; }
+
+/* Formulario*/
+
+form {
+    max-width: 640px;
+}
+
+label {
+    
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-crema-acentuado);
+    margin-bottom: 0.3rem;
+    margin-top: 1.2rem;
+}
+
+input, textarea, select {
+    
+    width: 100%;
+
+    background: var(--color-fondo-carta);
+    border: 1px solid var(--borde-color);
+    border-radius: var(--radio);
+
+    color: var(--color-letra-por-defecto);
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    
+    padding: 0.6rem 0.9rem;
+}
+
+input[type="color"] {
+
+    width: 60px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* Fieldsets */
+fieldset {
+
+    border: 1px solid var(--borde-color);
+    border-radius: var(--radio);
+    padding: 1rem 1.2rem;
+    margin-top: 1.2rem;
+}
+
+legend {
+
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    color: var(--color-crema-acentuado);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    accent-color: var(--color-crema-acentuado);
+    margin-right: 0.4rem;
+    cursor: pointer;
+}
+
+fieldset label {
+    display: inline;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-letra-por-defecto);
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Botones */
+
+button[type="submit"], button[type="reset"] {
+
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    padding: 0.7rem 1.8rem;
+    border-radius: var(--radio);
+    border: 1px solid;
+    transition: all 0.25s ease;
+    margin-top: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+button[type="submit"] {
+
+    background: var(--color-crema-acentuado);
+    color: var(--fondo-color-por-defecto);
+    border-color: var(--color-crema-acentuado);
+}
+button[type="submit"]:hover {
+    background: var(--color-crema-acentuado-2);
+    border-color: var(--color-crema-acentuado-2);
+    box-shadow: 0 0 16px rgba(200,184,162,0.3);
+}
+
+button[type="reset"] {
+
+    background: transparent;
+    color: var(--color-apagado);
+    border-color: var(--borde-color);
+}
+button[type="reset"]:hover {
+
+    border-color: var(--color-naranja);
+    color: var(--color-naranja);
+}
+
+/* --- FOOTER ---------------------------------------------------------------------------------- */
+
+footer { 
+
+    grid-area: footer;
+
+    border-top: 1px solid var(--borde-color);
+    background-color: var(--fondo-color-footer); 
+    padding: 1.5rem 3rem;
+
+    display: grid; /* Permite colocar las etiquetas header, nav, aside, main, footer como filas, y columnas a gusto */
+    grid-template-rows: auto; /* fr: fracción del sobrante del bloque */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nosotros  contacto";
+}
+
+footer h2 {
+
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: var(--color-apagado);
+}
+
+
+footer section {
+    
+    grid-area: nosotros;
+}
+
+footer address {
+    
+    grid-area: contacto;
+    font-style: normal;
+}
+
+footer p {
+
+    color: var(--color-apagado);
+    padding-right: 1rem;
+}
+
