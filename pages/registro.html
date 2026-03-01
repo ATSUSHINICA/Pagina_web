@@ -11,8 +11,7 @@
     <body>
 
         <header id="cabecera">
-            <!-- <h1><img src="img/titulo_hollow_knight.png" alt="Imagen titulo juego Hollow Knight"></h1> -->
-            <h1><img src="" alt="Imagen titulo juego Hollow Knight"></h1>
+            <h1><img src="../img/titulo_hollow_knight.png" alt="Imagen titulo juego Hollow Knight"></h1>
         </header>
 
         <nav>
@@ -24,6 +23,24 @@
             </ul>
         </nav>
 
+        <aside>
+            <h2>CONTENIDO</h2>
+
+            <a href="#nombre-explorador">Nombre de Explorador</a>
+            <a href="#historia-en-hallownest">Historia en Hallownest</a>
+            <a href="#horas-jugadas">Tiempo Jugado</a>
+            <a href="#id=contraseña">Contraseña</a>
+            <a href="#dificultad-del-juego">Dificulta Elegida</a>
+            <a href="#zona-favorita">Zona favorita</a>
+            <a href="#habilidades-desbloqueadas">Habilidades Desbloqueadas</a>
+            <a href="#hora-de-juego">Hora de Juego</a>
+            <a href="#fecha-ultimo-logro">Fecha Último Logro</a>
+            <a href="#color-capa">Color de Capa</a>
+            <a href="#captura-pantalla">Captura de Pantalla</a>
+            <a href="#registrarse">Registrarse</a>
+            <a href="#cabecera">Volver Arriba</a>
+        </aside>
+
         <main>
             <h2>REGISTRO</h2>
 
@@ -31,23 +48,23 @@
 
             <form action="confirmacion.html" method="POST">
                 <!-- 1. Caja de texto con longitud máxima y tamaño -->
-                <label for="nombre">Nombre del explorador:</label><br>
+                <label for="nombre" id="nombre-explorador">Nombre del explorador:</label><br>
                 <input type="text" id="nombre" name="nombre" maxlength="40" size="30" placeholder="Ej: El Caballero"><br><br>
 
                 <!-- 2. Caja de texto multilínea -->
-                <label for="historia">Tu historia en Hallownest:</label><br>
+                <label for="historia" id="historia-en-hallownest">Tu historia en Hallownest:</label><br>
                 <textarea id="historia" name="historia" rows="5" cols="50" placeholder="Cuéntanos cómo llegaste a Hallownest..."></textarea><br><br>
 
                 <!-- 3. Número con incremento automático -->
-                <label for="horas">Horas jugadas:</label><br>
+                <label for="horas" id="horas-jugadas">Horas jugadas:</label><br>
                 <input type="number" id="horas" name="horas" min="0" max="9999" step="10" placeholder="0"><br><br>
 
                 <!-- 4. Contraseña -->
-                <label for="password">Contraseña:</label><br>
+                <label for="password" id="contraseña">Contraseña:</label><br>
                 <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres"><br><br>
 
                 <!-- 5a. Primera agrupación de radio: dificultad -->
-                <fieldset>
+                <fieldset id="dificultad-del-juego">
                     <legend>Dificultad de juego</legend>
                     <input type="radio" id="facil" name="dificultad" value="facil">
                     <label for="facil">Explorador</label>
@@ -58,7 +75,7 @@
                 </fieldset><br>
 
                 <!-- 5b. Segunda agrupación de radio: región favorita -->
-                <fieldset>
+                <fieldset id="zona-favorita">
                     <legend>Zona favorita de Hallownest</legend>
                     <input type="radio" id="abismo" name="zona" value="abismo">
                     <label for="abismo">El Abismo</label>
@@ -71,7 +88,7 @@
                 </fieldset><br>
 
                 <!-- 6. Checkboxes: habilidades desbloqueadas -->
-                <fieldset>
+                <fieldset id="habilidades-desbloqueadas">
                     <legend>Habilidades desbloqueadas</legend>
                     <input type="checkbox" id="mantis" name="habilidades" value="mantis">
                     <label for="mantis">Salto de Mantis</label><br>
@@ -98,27 +115,27 @@
                 </select><br><br>
 
                 <!-- 8. Selector de mes -->
-                <label for="mes">Mes en que empezaste a jugar:</label><br>
+                <label for="mes" id="mes-que-empezaste">Mes en que empezaste a jugar:</label><br>
                 <input type="month" id="mes" name="mes"><br><br>
 
                 <!-- 9. Selector de hora -->
-                <label for="hora">Hora habitual de juego:</label><br>
+                <label for="hora" id="hora-de-juego">Hora habitual de juego:</label><br>
                 <input type="time" id="hora" name="hora"><br><br>
 
                 <!-- 10. Selector de fecha y hora -->
-                <label for="fechahora">Fecha y hora de tu último logro:</label><br>
+                <label for="fechahora" id="fecha-ultimo-logro">Fecha y hora de tu último logro:</label><br>
                 <input type="datetime-local" id="fechahora" name="fechahora"><br><br>
 
                 <!-- 11. Selector de color -->
-                <label for="color">Color de tu capa preferido:</label><br>
+                <label for="color" id="color-capa">Color de tu capa preferido:</label><br>
                 <input type="color" id="color" name="color" value="#1a1a2e"><br><br>
 
                 <!-- 12. Selector de archivo -->
-                <label for="captura">Sube tu mejor captura de pantalla:</label><br>
+                <label for="captura" id="captura-pantalla">Sube tu mejor captura de pantalla:</label><br>
                 <input type="file" id="captura" name="captura" accept=".jpg,.jpeg,.png"><br><br>
 
                 <!-- 13. Botón enviar · 14. Botón borrar -->
-                <button type="submit">Registrarse en Hallownest</button>
+                <button type="submit" id="registrarse">Registrarse en Hallownest</button>
                 <button type="reset">Borrar datos</button>
             </form>
         </main>
